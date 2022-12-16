@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PraiseUS.Models;
 
 namespace PraiseUS.Data
 {
@@ -9,5 +10,6 @@ namespace PraiseUS.Data
             : base(options)
         {
         }
+        public DbSet<PraiseUS.Models.Avis> Avis { get; set; }
     }
 }
