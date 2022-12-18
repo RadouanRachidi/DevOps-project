@@ -8,34 +8,34 @@ using Microsoft.EntityFrameworkCore;
 using PraiseUS.Data;
 using PraiseUS.Models;
 
-namespace PraiseUS
+namespace PraiseUS.Models
 {
-    public class DetailsModel : PageModel
+    public class DetailsModelLocataire : PageModel
     {
         private readonly PraiseUS.Data.ApplicationDbContext _context;
 
-        public DetailsModel(PraiseUS.Data.ApplicationDbContext context)
+        public DetailsModelLocataire(PraiseUS.Data.ApplicationDbContext context)
         {
             _context = context;
         }
 
-      public Avis Avis { get; set; }
+      public Locataire Locataire { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Avis == null)
+            if (id == null || _context.Locataire == null)
             {
                 return NotFound();
             }
 
-            var avis = await _context.Avis.FirstOrDefaultAsync(m => m.avisId == id);
-            if (avis == null)
+            var locataire = await _context.Locataire.FirstOrDefaultAsync(m => m.locataireId == id);
+            if (locataire == null)
             {
                 return NotFound();
             }
             else 
             {
-                Avis = avis;
+                Locataire = locataire;
             }
             return Page();
         }

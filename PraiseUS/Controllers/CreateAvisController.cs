@@ -11,13 +11,13 @@ namespace PraiseUs.Controllers
 
         private readonly ApplicationDbContext _context;
 
-        /*public IActionResult Create()
+        public IActionResult Create()
         {
             return View();
-        }*/
+        }
 
-        /***********************************************/
-        public IActionResult OnGet()
+      
+        /*public IActionResult OnGet()
         {
             return View();
         }
@@ -29,13 +29,13 @@ namespace PraiseUs.Controllers
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> Create(Avis avis)
         {
-            /*if (!ModelState.IsValid)
+            *//*if (!ModelState.IsValid)
             {
                 return View();
             }
                 */
 
-            Locataire user1 = new Locataire();
+          /*  Locataire user1 = new Locataire();
             user1.locataireId = 1;
             user1.nom = "YcfAdmin";
             user1.prenom = "YcfAdmin";
@@ -45,13 +45,11 @@ namespace PraiseUs.Controllers
 
             avis.locataire = user1;
 
-            _context.Avis.Add(avis);
+            _context.Avis.Add(avis);*//*
             await _context.SaveChangesAsync();
 
             return RedirectToPage("/");
         }
-
-            /***********************************************/
 
             public IActionResult My_Avis()
         {
@@ -62,6 +60,6 @@ namespace PraiseUs.Controllers
         {
             return View();
         }
-
+*/
     }
 }

@@ -8,24 +8,24 @@ using Microsoft.EntityFrameworkCore;
 using PraiseUS.Data;
 using PraiseUS.Models;
 
-namespace PraiseUS
+namespace PraiseUS.Models
 {
-    public class IndexModel : PageModel
+    public class IndexModelLocataire : PageModel
     {
         private readonly PraiseUS.Data.ApplicationDbContext _context;
 
-        public IndexModel(PraiseUS.Data.ApplicationDbContext context)
+        public IndexModelLocataire(PraiseUS.Data.ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IList<Avis> Avis { get;set; } = default!;
+        public IList<Locataire> Locataire { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Avis != null)
+            if (_context.Locataire != null)
             {
-                Avis = await _context.Avis.ToListAsync();
+                Locataire = await _context.Locataire.ToListAsync();
             }
         }
     }

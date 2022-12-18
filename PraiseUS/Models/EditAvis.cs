@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using PraiseUS.Data;
 using PraiseUS.Models;
 
-namespace PraiseUS
+namespace PraiseUS.Models
 {
     public class EditModel : PageModel
     {
