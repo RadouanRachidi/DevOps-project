@@ -3,25 +3,27 @@
 @{
     ViewData["Title"] = "Personal Data";
     ViewData["ActivePage"] = ManageNavPages.PersonalData;
+
+    <link rel="stylesheet" href="~/css/personalData.css" asp-append-version="true" />
 }
 
-<h3>@ViewData["Title"]</h3>
+<h3>Mes Données</h3>
 
-<div class="row">
+<div class="data-personel">
     <div class="col-md-6">
-        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+        <p>Votre compte est lié à des données qui vous concerne. Vous pouvez a tout moment décider de les supprimer.</p>
         <p>
-            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+            <strong>Supprimer vos données, supprimera autotmatiquement votre compte de façon définitive.</strong>
         </p>
-        <form id="download-data" asp-page="DownloadPersonalData" method="post">
+        @*<form id="download-data" asp-page="DownloadPersonalData" method="post">
             <button class="btn btn-primary" type="submit">Download</button>
-        </form>
+        </form>*@
         <p>
-            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Delete</a>
+            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Supprimer mes données</a>
         </p>
     </div>
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial" /> 
 }

@@ -7,18 +7,22 @@
     {
         Layout = "/Areas/Identity/Pages/_Layout.cshtml";
     }
-}
 
-<h1>Manage your account</h1>
+    <link rel="stylesheet" href="~/css/profil.css" asp-append-version="true" />
+}
+<div class="div_title_layout">
+    <h1 class="title_layout">Gérer le compte</h1>
+</div>
+
 
 <div>
-    <h2>Change your account settings</h2>
+
     <hr />
     <div class="row">
-        <div class="col-md-3">
+        <div class="layout-index-page">
             <partial name="_ManageNav" />
         </div>
-        <div class="col-md-9">
+        <div class="layout-body-account">
             @RenderBody()
         </div>
     </div>

@@ -9,7 +9,7 @@ namespace PraiseUs.Controllers
     public class CreateLocataireController : Controller
     {
 
-        private readonly ApplicationDbContext _context;
+        /*private readonly ApplicationDbContext _context;*/
 
         public IActionResult CreateLocataire()
         {
