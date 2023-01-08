@@ -1,0 +1,43 @@
+﻿@model PraiseUS.Models.Locataire
+
+<h1>Créer</h1>
+
+<h4>Locataire</h4>
+
+<h4>La bonne page</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        @* <form method="post" enctype="multipart/form-data">*@
+
+        <div class="row">
+            @using (Html.BeginForm("Index", "CreateLocataire", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label class="control-label">Nom</label>
+                    @Html.TextBoxFor(m => m.nom)
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Prenom</label>
+                    @Html.TextBoxFor(m => m.prenom)
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Nationalité</label>
+                    @Html.TextBoxFor(m => m.nationalite)
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Date de Naissance</label>
+                    @Html.TextBoxFor(m => m.dateDeNaissance)
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Date d'inscription</label>
+                    @Html.TextBoxFor(m => m.inscriptionDate)
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,15 +1,10 @@
-﻿@page
-@model PraiseUS.Models.EditModelLocataire
+﻿@model PraiseUS.Models.EditLocataireModel
 
-@{
-    ViewData["Title"] = "Edit";
-}
+<h1>Modifier un Locataire</h1>
 
-<h1>Edit</h1>
-
-<h4>Locataire</h4>
+<h5>Locataire</h5>
 <hr />
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -48,8 +43,9 @@
 
 <div>
     <a asp-page="./Index">Back to List</a>
-</div>
+</div>*@
 
-@section Scripts {
+@*@section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+*@

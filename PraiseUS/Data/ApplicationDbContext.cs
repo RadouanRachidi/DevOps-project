@@ -10,7 +10,7 @@ namespace PraiseUS.Data
             : base(options)
         {
         }
-        public DbSet<PraiseUS.Models.Avis> Avis { get; set; }
-        public DbSet<PraiseUS.Models.Locataire> Locataire { get; set; }
+        public DbSet<Avis> Avis { get; set; }
+        public DbSet<Locataire> Locataire { get; set; }
     }
 }

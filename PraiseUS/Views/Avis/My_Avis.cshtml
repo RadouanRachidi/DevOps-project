@@ -8,24 +8,18 @@
 
 <p class="p-avis">Voici l'ensemble de vos avis</p>
 
-@Html.ActionLink("Mes Avis", "Index", "IndexAvis", new { area = "" }, new { @class="txt-new-avis" })
+<h1>Création d'Avis</h1>
 
-@Html.ActionLink("Mes Avis", "Create", "CreateAvis", new { area = "" }, new { @class="txt-new-avis" })
-
-@Html.ActionLink("Mes Avis", "Details", "DetailsAvis", new { area = "" }, new { @class="txt-new-avis" })
-@Html.ActionLink("Mes Avis", "Edit", "EditAvis", new { area = "" }, new { @class="txt-new-avis" })
-@Html.ActionLink("Mes Avis", "Delete", "DeleteAvis", new { area = "" }, new { @class="txt-new-avis" }) 
+<p>Pour créer un avis vous devez créer un locataire préalablement.</p>
 
 <hr>
 
 @Html.ActionLink("Index", "Index", "IndexLocataire", new { area = "" }, new { @class="txt-new-avis" })
-@Html.ActionLink("Créer", "Create", "CreateLocataire", new { area = "" }, new { @class="txt-new-avis" })
+@Html.ActionLink("Créer", "Index", "CreateLocataire", new { area = "" }, new { @class="txt-new-avis" })
 @Html.ActionLink("Détails", "Details", "DetailsLocataire", new { area = "" }, new { @class="txt-new-avis" })
 @Html.ActionLink("Modifier", "Edit", "EditLocataire", new { area = "" }, new { @class="txt-new-avis" })
 @Html.ActionLink("Supprimer", "Delete", "DeleteLocataire", new { area = "" }, new { @class="txt-new-avis" }) 
 
+<hr>
 
-
-@Html.ActionLink("Mes Avis", "Create", "CreateAvis", new { area = "" }, new { @class="txt-new-avis" })
-
-@Html.ActionLink("Créer", "Create", "CreateLocataire", new { area = "" }, new { @class="txt-new-avis" })
+@*@Html.ActionLink("Créer", "CreateLocataire", "Locataire", new { area = "" }, new { @class="txt-new-avis" })*@

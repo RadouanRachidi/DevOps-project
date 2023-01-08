@@ -1,0 +1,42 @@
+﻿
+@model PraiseUS.Models.Locataire
+
+@{
+    ViewData.TemplateInfo.HtmlFieldPrefix = "Locataire";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nom" class="control-label"></label>
+                <input asp-for="nom" class="form-control" />
+                <span asp-validation-for="nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="prenom" class="control-label"></label>
+                <input asp-for="prenom" class="form-control" />
+                <span asp-validation-for="prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nationalite" class="control-label"></label>
+                <input asp-for="nationalite" class="form-control" />
+                <span asp-validation-for="nationalite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateDeNaissance" class="control-label"></label>
+                <input asp-for="dateDeNaissance" class="form-control" />
+                <span asp-validation-for="dateDeNaissance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="inscriptionDate" class="control-label"></label>
+                <input asp-for="inscriptionDate" class="form-control" />
+                <span asp-validation-for="inscriptionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

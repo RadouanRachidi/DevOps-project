@@ -16,6 +16,23 @@ namespace PraiseUs.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var resource = await _context.Locataire
+                .FirstOrDefaultAsync(m => m.locataireId == id);
+            if (resource == null)
+            {
+                return NotFound();
+            }
+
+            return View(resource);
+        }
+
 
     }
 }

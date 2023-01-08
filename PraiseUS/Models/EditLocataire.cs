@@ -11,9 +11,9 @@ using PraiseUS.Models;
 
 namespace PraiseUS.Models
 {
-    public class EditModelLocataire : PageModel
+    public class EditLocataireModel : PageModel
     {
-        private readonly PraiseUS.Data.ApplicationDbContext _context;
+        /*private readonly PraiseUS.Data.ApplicationDbContext _context;
 
         public EditModelLocataire(PraiseUS.Data.ApplicationDbContext context)
         {
@@ -72,6 +72,6 @@ namespace PraiseUS.Models
         private bool LocataireExists(int id)
         {
           return _context.Locataire.Any(e => e.locataireId == id);
-        }
+        }*/
     }
 }

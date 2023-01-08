@@ -10,11 +10,11 @@ using PraiseUS.Models;
 
 namespace PraiseUS.Models
 {
-    public class IndexModelLocataire : PageModel
+    public class IndexLocataireModel : PageModel
     {
-        private readonly PraiseUS.Data.ApplicationDbContext _context;
+        /*private readonly PraiseUS.Data.ApplicationDbContext _context;
 
-        public IndexModelLocataire(PraiseUS.Data.ApplicationDbContext context)
+        public IndexLocataire(PraiseUS.Data.ApplicationDbContext context)
         {
             _context = context;
         }
@@ -27,6 +27,6 @@ namespace PraiseUS.Models
             {
                 Locataire = await _context.Locataire.ToListAsync();
             }
-        }
+        }*/
     }
 }
