@@ -53,11 +53,13 @@ namespace PraiseUs.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-            // This would select the beer and pass it into the view as the view's model.
+            // This would select the beer and pass it ingithub
+            // to the view as the view's model.
             // Brewer should also be populated for this beer.
             //var beer = _brewerRepository.GetBy(brewerId).Beers.FirstOrDefault(e => e.BeerId == id);
+            //locataires.Remove(locataires.FirstOrDefault());
+
             List<Locataire> locataires = await ctx.Locataire.ToListAsync();
-           //locataires.Remove(locataires.FirstOrDefault());
 
             ctx.Entry(locataires.FirstOrDefault(e => e.locataireId == id)).State = EntityState.Deleted;
             
