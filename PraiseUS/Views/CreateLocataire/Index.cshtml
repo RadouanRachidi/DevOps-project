@@ -1,43 +1,43 @@
 ﻿@model PraiseUS.Models.Locataire
 
-<h1>Créer</h1>
+@{
+    <link rel="stylesheet" href="~/css/update-locataire.css" asp-append-version="true" />
+}
 
-<h4>Locataire</h4>
 
-<h4>La bonne page</h4>
-<hr />
+    <div class="body-login">
+        <section>
 
-<div class="row">
-    <div class="col-md-4">
-        @* <form method="post" enctype="multipart/form-data">*@
-
-        <div class="row">
-            @using (Html.BeginForm("Index", "CreateLocataire", FormMethod.Post))
-            {
-                <div class="form-group">
-                    <label class="control-label">Nom</label>
-                    @Html.TextBoxFor(m => m.nom)
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Prenom</label>
-                    @Html.TextBoxFor(m => m.prenom)
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Nationalité</label>
-                    @Html.TextBoxFor(m => m.nationalite)
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Date de Naissance</label>
-                    @Html.TextBoxFor(m => m.dateDeNaissance)
-                </div>
-                <div class="form-group">
-                    <label class="control-label">Date d'inscription</label>
-                    @Html.TextBoxFor(m => m.inscriptionDate)
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            }
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
         </div>
+
+        
+        
+        @using (Html.BeginForm("Index", "CreateLocataire", FormMethod.Post, new { @class = "form-global" }))
+        {
+            <h1>Créer un locataire</h1>
+            <div class="form-group">
+                <label class="control-label">Nom</label>
+                @Html.TextBoxFor(m => m.nom)
+            </div>
+            <div class="form-group">
+                <label class="control-label">Prenom</label>
+                @Html.TextBoxFor(m => m.prenom)
+            </div>
+            <div class="form-group">
+                <label class="control-label">Nationalité</label>
+                @Html.TextBoxFor(m => m.nationalite)
+            </div>
+            <div class="form-group">
+                <label class="control-label">Date de Naissance</label>
+                @Html.TextBoxFor(m => m.dateDeNaissance)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        }
+
+        </section>
     </div>
-</div>

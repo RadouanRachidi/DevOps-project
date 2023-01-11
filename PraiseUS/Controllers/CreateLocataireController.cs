@@ -30,7 +30,7 @@ namespace PraiseUs.Controllers
             string prenom = locataire.prenom;
             string nationalite = locataire.nationalite;
             DateTime dateNaissance = locataire.dateDeNaissance;
-            DateTime dateInscription = locataire.inscriptionDate;
+            locataire.inscriptionDate = DateTime.Today;
 
             ctx.Locataire.Add(locataire);
             ctx.SaveChanges();

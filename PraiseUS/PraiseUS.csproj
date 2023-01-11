@@ -8,10 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\indexLocataire.css" />
+    <Content Remove="wwwroot\css\update-locataire.css" />
+    <Content Remove="wwwroot\css\updateLocataire.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\indexLocataire.css" />
     <None Include="wwwroot\css\a2f.css" />
     <None Include="wwwroot\css\avis.css" />
     <None Include="wwwroot\css\email.css" />
     <None Include="wwwroot\css\index.css" />
+    <None Include="wwwroot\css\updateLocataire.css" />
+    <None Include="wwwroot\css\update-locataire.css" />
     <None Include="wwwroot\css\manage.css" />
     <None Include="wwwroot\css\mdp.css" />
     <None Include="wwwroot\css\my_avis.css" />

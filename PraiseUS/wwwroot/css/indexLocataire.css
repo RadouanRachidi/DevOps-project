@@ -1,0 +1,27 @@
+.btn-add-locataire {
+    color: white;
+    background-color: #f34242;
+    border-radius: 15px;
+    border: 0px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+
+.btn-action {
+    color: white;
+    background-color: #f34242;
+    border-radius: 9px;
+    border: 0px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.vos-fiches 
+{
+    color : #f34242 ;
+}

@@ -2,119 +2,65 @@
 
 @{
     ViewBag.Title = "Edit";
-}
-<h1>Modifier un Locataire</h1>
-
-<h5>Locataire</h5>
-<hr />
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <div class="form-horizontal">
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.locataireId)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.nom, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nom, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nom, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.prenom, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.prenom, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.prenom, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.nationalite, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nationalite, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nationalite, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+    <link rel="stylesheet" href="~/css/updateLocataire.css" asp-append-version="true" />
 }
 
-<div>
+@*<div class="btn-back">
     @Html.ActionLink("Back to List", "Index")
-</div>
-
-@*<div class="row">
-    @using (Html.BeginForm("Edit", "EditLocataire", FormMethod.Post))
-    {
-        <div class="form-group">
-            <label class="control-label">Nom</label>
-            @Html.TextBoxFor(locataireid => locataireid.nom)
-        </div>
-        <div class="form-group">
-            <label class="control-label">Prenom</label>
-            @Html.TextBoxFor(locataireid => locataireid.prenom)
-        </div>
-        <div class="form-group">
-            <label class="control-label">Nationalité</label>
-            @Html.TextBoxFor(locataireid => locataireid.nationalite)
-        </div>
-
-        <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-primary" />
-        </div>
-    }
-</div>
-*@
-@*<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Locataire.locataireId" />
-            <div class="form-group">
-                <label asp-for="Locataire.nom" class="control-label"></label>
-                <input asp-for="Locataire.nom" class="form-control" />
-                <span asp-validation-for="Locataire.nom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Locataire.prenom" class="control-label"></label>
-                <input asp-for="Locataire.prenom" class="form-control" />
-                <span asp-validation-for="Locataire.prenom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Locataire.nationalite" class="control-label"></label>
-                <input asp-for="Locataire.nationalite" class="form-control" />
-                <span asp-validation-for="Locataire.nationalite" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Locataire.dateDeNaissance" class="control-label"></label>
-                <input asp-for="Locataire.dateDeNaissance" class="form-control" />
-                <span asp-validation-for="Locataire.dateDeNaissance" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Locataire.inscriptionDate" class="control-label"></label>
-                <input asp-for="Locataire.inscriptionDate" class="form-control" />
-                <span asp-validation-for="Locataire.inscriptionDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-page="./Index">Back to List</a>
 </div>*@
 
-@*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+<div class="body-login">
+    <section>
+
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        @using (Html.BeginForm())
+    {
+     <div class="form-global">
+        <h2>Modifier un locataire</h2>
+
+       @*Protection contre inection SQL*@
+       @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.locataireId)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.nom, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nom, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nom, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.prenom, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.prenom, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.prenom, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.nationalite, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nationalite, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nationalite, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Modifier" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
 }
-*@
+
+</section>
+</div>
+
+
