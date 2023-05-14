@@ -83,7 +83,7 @@
                         </div>*@
 
                         <div class="mb-3">
-                            <input type="submit" value="Update User" class="btn btn-success btn-block btn-lg" id="edit-user-btn">
+                            <input type="submit" value="Update User " class="btn btn-success btn-block btn-lg" id="edit-user-btn">
                         </div>
                     </form>
                 </div>
@@ -97,10 +97,12 @@
                 <div>
                     <h4 class="vos-fiches">Vos fiches locataires</h4>
                 </div>
+
                 <div>
-                    @Html.ActionLink("Ajouter un locataire", "Index", "CreateLocataire", new { area = "" }, new { @class="btn btn-primary btn-add-locataire" })
-                    @*<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addNewUserModal">Ajouter un nouveau locataire</button>*@
+                    @Html.ActionLink("Ajouter un locataire", "Index", "CreateLocataire",
+                    new { area = "" }, new { @class="btn btn-primary btn-add-locataire" })
                 </div>
+
             </div>
         </div>
         <hr>

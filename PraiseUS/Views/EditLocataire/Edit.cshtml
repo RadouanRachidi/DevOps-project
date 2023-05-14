@@ -23,7 +23,6 @@
      <div class="form-global">
         <h2>Modifier un locataire</h2>
 
-       @*Protection contre inection SQL*@
        @Html.AntiForgeryToken()
 
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })

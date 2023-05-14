@@ -8,7 +8,6 @@ namespace PraiseUS.Models
 {
     public class Locataire
     {
-        /*[Key]*/
 
         ///<summary>
         /// Gets or sets LocataireId
