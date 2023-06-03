@@ -74,8 +74,6 @@ namespace PraiseUS.Models
 
             await _context.Database.ExecuteSqlInterpolatedAsync($"EXEC SupprimerFicheLocataire {locataireId}");
 
-            // ...
-
             return RedirectToPage("./Index");
         }
     }

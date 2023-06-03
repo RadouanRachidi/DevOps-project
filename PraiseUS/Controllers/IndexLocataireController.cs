@@ -31,14 +31,20 @@ namespace PraiseUs.Controllers
             return View(locataires);
         }
 
-        public async Task<IActionResult> Delete(int id)
-        {
 
+        public async Task<IActionResult> Delete(int? id)
+        {
             List<Locataire> locataires = await ctx.Locataire.ToListAsync();
 
-            ctx.Entry(locataires.FirstOrDefault(e => e.locataireId == id)).State = EntityState.Deleted;
-            
-            ctx.SaveChanges();
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            int locataireId = id.Value;
+
+            await ctx.Database.ExecuteSqlInterpolatedAsync($"EXEC SupprimerFicheLocataire {locataireId}");
+
             return View(locataires);
         }
 
