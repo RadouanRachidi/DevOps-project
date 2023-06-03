@@ -29,7 +29,6 @@ namespace PraiseUs.Controllers
             return View(locataire);
         }
 
-        //Récupere pas les données et ne met pas à jour
         [HttpPost]
         public async Task<IActionResult> Edit(Locataire locataire)
         {

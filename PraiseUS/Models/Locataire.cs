@@ -38,6 +38,10 @@ namespace PraiseUS.Models
         /// Gets or sets inscriptionDate
         /// </summary>
         public DateTime inscriptionDate { get; set; }
+
+        ///<summary>
+        /// </summary>
+        public string Id_Users { get; set; }
     }
 
 }

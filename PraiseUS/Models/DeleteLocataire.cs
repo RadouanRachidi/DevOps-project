@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using PraiseUS.Data;
 using PraiseUS.Models;
@@ -42,20 +44,37 @@ namespace PraiseUS.Models
             return Page();
         }
 
+        /* public async Task<IActionResult> OnPostAsync(int? id)
+         {
+             if (id == null || _context.Locataire == null)
+             {
+                 return NotFound();
+             }
+             var locataire = await _context.Locataire.FindAsync(id);
+
+             if (locataire != null)
+             {
+                 Locataire = locataire;
+                 _context.Locataire.Remove(Locataire);
+                 await _context.SaveChangesAsync();
+             }
+
+             return RedirectToPage("./Index");
+         }*/
+
+
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Locataire == null)
+            if (id == null)
             {
-                return NotFound();
+                return BadRequest();
             }
-            var locataire = await _context.Locataire.FindAsync(id);
 
-            if (locataire != null)
-            {
-                Locataire = locataire;
-                _context.Locataire.Remove(Locataire);
-                await _context.SaveChangesAsync();
-            }
+            int locataireId = id.Value;
+
+            await _context.Database.ExecuteSqlInterpolatedAsync($"EXEC SupprimerFicheLocataire {locataireId}");
+
+            // ...
 
             return RedirectToPage("./Index");
         }

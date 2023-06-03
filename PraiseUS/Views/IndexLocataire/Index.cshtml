@@ -138,8 +138,9 @@
                                     <td>@item.dateDeNaissance</td>
                                     <td>@item.inscriptionDate</td>
                                     <td>
-                                    <a asp-controller="IndexLocataire" asp-action="Delete" asp-route-ID="@item.locataireId" class="btn-action">Delete</a>
-                                    <a asp-controller="EditLocataire" asp-action="Edit" asp-route-ID="@item.locataireId" class="btn-action">Edit</a>
+                                    <a asp-controller="IndexLocataire" asp-action="Delete" asp-route-ID="@item.locataireId" class="btn-action">Supprimer</a>
+                                    <a asp-controller="CreateAvis" asp-action="Index" asp-route-ID="@item.locataireId" class="btn-action">Ajouter un avis</a>
+                                    <a asp-controller="EditLocataire" asp-action="Edit" asp-route-ID="@item.locataireId" class="btn-action">Modifier</a>
                                     </td>
                                 </tr>
                                 }

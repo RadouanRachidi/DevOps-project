@@ -1,4 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace PraiseUS.Models
 {
@@ -13,6 +17,8 @@ namespace PraiseUS.Models
 
         public DateTime avisDate { get; set; }
 
-        public virtual Locataire locataire { get; set; }
+        public int locataireId { get; set; }
+
+        //public virtual Locataire locataire { get; set; }
     }
 }

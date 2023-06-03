@@ -1,10 +1,6 @@
-﻿@page
-@model PraiseUS.Models.CreateModel
+﻿@model PraiseUS.Models.Avis
 
-@{
-    ViewData["Title"] = "Create";
-}
-
+@*
 <h1>Create</h1>
 
 <h4>Avis</h4>
@@ -37,8 +33,33 @@
 
 <div>
     <a asp-page="Index">Retour</a>
-</div>
+</div>*@
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+<div class="body-login">
+    <section>
+
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+
+
+        @using (Html.BeginForm("Index", "CreateAvis", FormMethod.Post, new { @class = "form-global" }))
+        {
+            <h1>Créer un avis</h1>
+            <div class="form-group">
+                <label class="control-label">Note</label>
+                @Html.TextBoxFor(m => m.note)
+            </div>
+            <div class="form-group">
+                <label class="control-label">Commentaire</label>
+                @Html.TextBoxFor(m => m.commentaire)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        }
+
+    </section>
+</div>
