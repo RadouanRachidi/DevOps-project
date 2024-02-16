@@ -22,5 +22,4 @@ jobs:
           script: |
             cd /home/r.radouan/PUs
             git pull origin main
-            # Autres étapes de déploiement
 
