@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /path/to/your/project
+            cd /home/r.radouan/PUs
             git pull origin main
             # Autres étapes de déploiement
 
