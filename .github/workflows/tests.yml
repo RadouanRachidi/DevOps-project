@@ -1,4 +1,4 @@
-name: .NET Core Tests
+name: .NET 6.0 Tests
 
 on: [push]
 
@@ -10,7 +10,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Setup .NET Core
+    - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '6.0'
@@ -22,4 +22,4 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --configuration Release --no-build --verbosity normal
