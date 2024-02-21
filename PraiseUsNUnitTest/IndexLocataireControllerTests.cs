@@ -1,4 +1,3 @@
-using Moq;
 using NUnit.Framework;
 using Microsoft.AspNetCore.Mvc;
 using PraiseUs.Controllers;
@@ -11,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using PraiseUS.Data;
 using PraiseUS.Models;
 using System.Net.Http;
+using Microsoft.Extensions.Options;
+using Moq; 
 
 namespace PraiseUs.Tests.Controllers
 {
@@ -25,21 +26,27 @@ namespace PraiseUs.Tests.Controllers
         [SetUp]
         public void Setup()
         {
-            // Setup DbContext and DbSet
-            _mockDbSet = new Mock<DbSet<Locataire>>();
-            _mockContext = new Mock<ApplicationDbContext>();
-            _mockContext.Setup(ctx => ctx.Locataire).Returns(_mockDbSet.Object);
+            // Créer des options pour le contexte de base de données en mémoire
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
+                .Options;
+
+            // Utiliser le constructeur avec des options pour mocker ApplicationDbContext
+            _mockContext = new Mock<ApplicationDbContext>(options);
 
             var locataires = new List<Locataire>
-            {
-                new Locataire { Id_Users = "testUserId" }, 
-                new Locataire { Id_Users = "testUserId" }
-            }.AsQueryable();
+                {
+                    new Locataire { Id_Users = "testUserId1" }, // Assurez-vous que les IDs sont uniques
+                    new Locataire { Id_Users = "testUserId2" }
+                }.AsQueryable();
 
+            _mockDbSet = new Mock<DbSet<Locataire>>();
             _mockDbSet.As<IQueryable<Locataire>>().Setup(m => m.Provider).Returns(locataires.Provider);
             _mockDbSet.As<IQueryable<Locataire>>().Setup(m => m.Expression).Returns(locataires.Expression);
             _mockDbSet.As<IQueryable<Locataire>>().Setup(m => m.ElementType).Returns(locataires.ElementType);
-            _mockDbSet.As<IQueryable<Locataire>>().Setup(m => m.GetEnumerator()).Returns(() => locataires.GetEnumerator());
+            _mockDbSet.As<IQueryable<Locataire>>().Setup(m => m.GetEnumerator()).Returns(locataires.GetEnumerator());
+
+            _mockContext.Setup(ctx => ctx.Locataire).Returns(_mockDbSet.Object);
 
             // Setup user claims
             _mockUser = new Mock<ClaimsPrincipal>();
@@ -59,6 +66,7 @@ namespace PraiseUs.Tests.Controllers
                 }
             };
         }
+
 
         [Test]
         public async Task Index_ReturnsViewWithLocataires()
