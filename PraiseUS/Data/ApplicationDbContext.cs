@@ -11,6 +11,6 @@ namespace PraiseUS.Data
         {
         }
         public DbSet<Avis> Avis { get; set; }
-        public DbSet<Locataire> Locataire { get; set; }
+        public virtual DbSet<Locataire> Locataire { get; set; }
     }
 }
