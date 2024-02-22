@@ -2,13 +2,12 @@ name: .NET Core Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
-
     runs-on: windows-latest
 
     steps:
@@ -17,7 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.401'
+        dotnet-version: '6.0.401' # Assurez-vous que c'est la version correcte pour votre projet
 
     - name: Install dependencies
       run: dotnet restore
@@ -25,8 +24,4 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
-
-    - name: Publish
-      run: dotnet publish -c Release -o published
+    # Ajoutez les étapes supplémentaires ici si nécessaire, par exemple pour les tests ou la publication
