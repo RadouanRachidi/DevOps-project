@@ -20,6 +20,10 @@ jobs:
 
     - name: Build
       run: dotnet build --no-restore
+      
+    - name: Install Roslynator CLI
+      run: dotnet tool install --global Roslynator.DotNet.Cli
+
 
     - name: Analyze code with Roslynator
       run: dotnet roslynator analyze
