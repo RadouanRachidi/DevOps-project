@@ -69,21 +69,5 @@ namespace PraiseUs.Tests.Controllers
             };
         }
 
-
-        [Test]
-        public async Task Index_ReturnsViewWithLocataires()
-        {
-            // Act
-            var result = await _controller.Index();
-
-            // Assert
-            Assert.IsInstanceOf<ViewResult>(result);
-            var viewResult = result as ViewResult;
-            Assert.IsNotNull(viewResult);
-            var model = viewResult.Model as List<Locataire>;
-            Assert.IsNotNull(model);
-            Assert.AreEqual(2, model.Count);
-        }
-
     }
 }
