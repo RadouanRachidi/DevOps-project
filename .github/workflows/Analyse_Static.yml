@@ -23,7 +23,9 @@ jobs:
       
     - name: Install Roslynator CLI
       run: dotnet tool install --global Roslynator.DotNet.Cli
-
+      
+    - name: Add dotnet tools to PATH
+      run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
     - name: Analyze code with Roslynator
       run: dotnet roslynator analyze
