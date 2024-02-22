@@ -3,7 +3,7 @@ name: Build and Archive Artifacts
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
