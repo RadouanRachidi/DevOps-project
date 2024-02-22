@@ -23,6 +23,8 @@ namespace PraiseUs.Tests.Controllers
         private IndexLocataireController _controller;
         private Mock<ClaimsPrincipal> _mockUser;
 
+
+
         [SetUp]
         public void Setup()
         {
