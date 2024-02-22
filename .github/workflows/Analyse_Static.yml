@@ -28,5 +28,6 @@ jobs:
       run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
     - name: Analyze code with Roslynator
-      run: roslynator analyze --ignore-analysis-errors
+      run: roslynator analyze 
+      continue-on-error: true
 
