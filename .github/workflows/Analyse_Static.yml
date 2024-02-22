@@ -1,0 +1,25 @@
+name: .NET CI with Roslynator
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0' # Remplacez par la version de .NET que vous utilisez
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+
+    - name: Analyze code with Roslynator
+      run: dotnet roslynator analyze
