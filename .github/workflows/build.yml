@@ -16,12 +16,9 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.401' # Assurez-vous que c'est la version correcte pour votre projet
-
+        dotnet-version: '6.0.401'
     - name: Install dependencies
       run: dotnet restore
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
-
-    # Ajoutez les étapes supplémentaires ici si nécessaire, par exemple pour les tests ou la publication
