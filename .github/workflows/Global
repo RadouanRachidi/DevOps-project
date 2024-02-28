@@ -29,5 +29,3 @@ jobs:
 
     - name: Publish
       run: dotnet publish --configuration Release --no-restore -o out
-
-    # Ajoutez ici des étapes pour le déploiement et autres tâches
