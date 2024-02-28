@@ -74,16 +74,10 @@ Règles de Gestion de l'Intégrité des Données
 
 | 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
 |-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
-| UserId															 	                     |		INT			|Identifiant unique de l'utilisateur|Clé primaire, Auto-incrément|
-| UserName 																                   |VARCHAR			|Nom d'utilisateur					|Unique, Non nul	|
-| Accéder à toutes les fiches locataires et propriétaires				|VARCHAR					|									|					|
-| Gérer le système de notifications et les paramètres de l'application	|VARCHAR					|									|					|
-| Analyser les données d'usage de l'application 						|ENUM					|									|					|
-| Créer des fiches locataire avec leur consentement					 	|					|									|					|
-| Publier des avis sur les locataires									|					|									|					|
-| Consulter et répondre aux avis reçus									|					|									|					|
-| Créer des fiches propriétaire											|					|									|					|
-| Publier des avis sur les propriétaires et logements					|					|									|					|
-| Recevoir des notifications sur les avis publiés à leur sujet			|					|									|					|
-| Consulter et répondre aux avis reçus									|					|									|					|
-| Consulter les classements et les avis publics                       	|					|									|					|
+| UserId															 	|		INT			|Identifiant unique de l'utilisateur|Clé primaire, Auto-incrément|
+| UserName 																|VARCHAR			|Nom d'utilisateur					|Unique, Non nul	|
+| Accéder à toutes les fiches locataires et propriétaires				|VARCHAR			|Adresse mail						|Unique, Non nul	|
+| Gérer le système de notifications et les paramètres de l'application	|VARCHAR			|Hash du mdp						|Non nul			|
+| Analyser les données d'usage de l'application 						|ENUM				|Rôle de l'utilisateur				|Non nul			|
+| Créer des fiches locataire avec leur consentement					 	|DATETIME			|Date de création du compte			|Non nul			|
+| Publier des avis sur les locataires									|DATETIME			|Date de la dernière conenxion		|					|
