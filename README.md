@@ -13,7 +13,7 @@ L'objectif de PraiseUs est de forger une communauté où la confiance, le respec
 
 Règle de Gestion des Comptes Utilisateurs 
 
-* Chaque utilisateur doit s'inscrire avec une adresse e-mail valide, et un mot de passe sécurisé conforme aux normes définies (longueur, complexité).
+* Chaque utilisateur doit s'inscrire avec une adresse e-mail valide, un nom d'utilisateur et un mot de passe sécurisé conforme aux normes définies (longueur, complexité).
 * Les utilisateurs doivent confirmer leur adresse e-mail via un lien d'activation envoyé à leur adresse pour finaliser la création du compte.
 
 Règles de Gestion des Profils Locataires et Propriétaires
@@ -44,6 +44,7 @@ Règles de Gestion de l'Intégrité des Données
 
 
 # RBAC
+
 | Permissions                                                   		      | Administrateur 	| Propriétaires/Agence Immobilière 	| Locataire 	| Visiteur 	|
 |-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:--------------:	|:----:	|
 |                     	**Permission Administrateur**                 	  |                	|           						                  |                	|      	|
@@ -66,3 +67,23 @@ Règles de Gestion de l'Intégrité des Données
 |            **Permission Visiteir(Utlisateir non authentifié)**	       |                	|     			      				|                	|      	|
 | Consulter les classements et les avis publics                       	 |        ✅       |     			✅     				|        ✅       	|   ✅  	|
 | Rechercher des logements et propriétaires                       		    |        ✅       |     			✅     				|        ✅       	|   ✅  	|
+
+
+
+# Dictionnaire de données
+
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| UserId															 	                     |		INT			|Identifiant unique de l'utilisateur|Clé primaire, Auto-incrément|
+| UserName 																                   |VARCHAR			|Nom d'utilisateur					|Unique, Non nul	|
+| Accéder à toutes les fiches locataires et propriétaires				|VARCHAR					|									|					|
+| Gérer le système de notifications et les paramètres de l'application	|VARCHAR					|									|					|
+| Analyser les données d'usage de l'application 						|ENUM					|									|					|
+| Créer des fiches locataire avec leur consentement					 	|					|									|					|
+| Publier des avis sur les locataires									|					|									|					|
+| Consulter et répondre aux avis reçus									|					|									|					|
+| Créer des fiches propriétaire											|					|									|					|
+| Publier des avis sur les propriétaires et logements					|					|									|					|
+| Recevoir des notifications sur les avis publiés à leur sujet			|					|									|					|
+| Consulter et répondre aux avis reçus									|					|									|					|
+| Consulter les classements et les avis publics                       	|					|									|					|
