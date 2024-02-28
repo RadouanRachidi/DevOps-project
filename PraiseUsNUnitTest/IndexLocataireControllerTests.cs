@@ -28,17 +28,15 @@ namespace PraiseUs.Tests.Controllers
         [SetUp]
         public void Setup()
         {
-            // Créer des options pour le contexte de base de données en mémoire
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(databaseName: "TestDatabase")
                 .Options;
 
-            // Utiliser le constructeur avec des options pour mocker ApplicationDbContext
             _mockContext = new Mock<ApplicationDbContext>(options);
 
             var locataires = new List<Locataire>
                 {
-                    new Locataire { Id_Users = "testUserId1" }, // Assurez-vous que les IDs sont uniques
+                    new Locataire { Id_Users = "testUserId1" }, 
                     new Locataire { Id_Users = "testUserId2" }
                 }.AsQueryable();
 

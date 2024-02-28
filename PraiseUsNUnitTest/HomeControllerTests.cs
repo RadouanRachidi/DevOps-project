@@ -37,18 +37,14 @@ public class HomeControllerTests
     public void Error_Returns_ViewResult_With_ErrorViewModel()
     {
         // Arrange
-        var httpContext = new DefaultHttpContext(); // Créez un nouveau HttpContext
+        var httpContext = new DefaultHttpContext(); 
         controller.ControllerContext = new ControllerContext()
         {
             HttpContext = httpContext
         };
 
-        // Vous pouvez également configurer d'autres propriétés de httpContext si nécessaire
-
-        // Act
         var result = controller.Error();
 
-        // Assert
         Assert.IsInstanceOf<ViewResult>(result);
         var viewResult = result as ViewResult;
         Assert.IsInstanceOf<ErrorViewModel>(viewResult.Model);
