@@ -44,25 +44,25 @@ Règles de Gestion de l'Intégrité des Données
 
 
 # RBAC
-| Permissions                                                   		| Administrateur 	| Propriétaires/Agence Immobilière 	| Locataire 	| Visiteur 	|
-|-----------------------------------------------------------------------|:--------------:	|:---------:	|:-------------:	|:--------------:	|:----:	|
-|                     	**Permission Administrateur**                 	|                	|           						|                	|      	|
-| Gérer les comptes utilisateurs (création, supression, suspension) 	|        ✅       	|     			❌     				|        ❌       	|   ❌  	|
-| Modérer les avis (validation, supression des avis inappropriés) 		|        ✅       	|     			❌     				|        ❌       	|   ❌  	|
-| Accéder à toutes les fiches locataires et propriétaires				|        ✅       	|     			❌     				|        ❌       	|   ❌  	|
-| Gérer le système de notifications et les paramètres de l'application	|        ✅       	|     			❌     				|        ❌       	|   ❌  	|
-| Analyser les données d'usage de l'application 						|        ✅       	|     			❌     				|        ❌       	|   ❌  	|
-|            			**Permission Propriétaires/Agence**	           	|                	|     			      				|                	|      	|
-| Créer des fiches locataire avec leur consentement					 	|        ✅       	|     			✅     				|        ❌      	|   ❌  	|
-| Publier des avis sur les locataires									|        ✅       	|     			✅     				|        ❌      	|   ❌  	|
+| Permissions                                                   		      | Administrateur 	| Propriétaires/Agence Immobilière 	| Locataire 	| Visiteur 	|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:--------------:	|:----:	|
+|                     	**Permission Administrateur**                 	  |                	|           						                  |                	|      	|
+| Gérer les comptes utilisateurs (création, supression, suspension) 	   |        ✅       |     			❌     				               |        ❌       	|   ❌  	|
+| Modérer les avis (validation, supression des avis inappropriés) 		    |        ✅       |     			❌     				               |        ❌       	|   ❌  	|
+| Accéder à toutes les fiches locataires et propriétaires				           |        ✅       |     			❌     				               |        ❌       	|   ❌  	|
+| Gérer le système de notifications et les paramètres de l'application	 |        ✅       |     			❌     				               |        ❌       	|   ❌  	|
+| Analyser les données d'usage de l'application 						                  |        ✅       |     			❌     				               |        ❌       	|   ❌  	|
+|            			**Permission Propriétaires/Agence**	           	        |                	|     			      				 |                	|      	|
+| Créer des fiches locataire avec leur consentement					 	              |        ✅       |     			✅     				|        ❌      	|   ❌  	|
+| Publier des avis sur les locataires									                          |        ✅       |     			✅     				|        ❌      	|   ❌  	|
 | Recevoir des notifications sur les avis concernant 								
-  leurs propriétés ou sur eux-mêmes										|        ✅       	|     			✅     				|        ❌       	|   ❌  	|
-| Consulter et répondre aux avis reçus									|        ✅       	|     			✅     				|        ❌       	|   ❌  	|
-|            			**Permission Locataire**	            		|                	|   							 	|                	|      	|
-| Créer des fiches propriétaire											|        ✅       	|     			❌     				|        ✅       	|   ❌  	|
-| Publier des avis sur les propriétaires et logements					|        ✅       	|     			❌     				|        ✅       	|   ❌  	|
-| Recevoir des notifications sur les avis publiés à leur sujet			|        ✅       	|     			❌     				|        ✅       	|   ❌  	|
-| Consulter et répondre aux avis reçus									|        ✅       	|     			❌     				|        ✅       	|   ❌  	|
-|            **Permission Visiteir(Utlisateir non authentifié)**	    |                	|     			      				|                	|      	|
-| Consulter les classements et les avis publics                       	|        ✅       	|     			✅     				|        ✅       	|   ✅  	|
-| Rechercher des logements et propriétaires                       		|        ✅       	|     			✅     				|        ✅       	|   ✅  	|
+  leurs propriétés ou sur eux-mêmes										                           |        ✅       |     			✅     				|        ❌       	|   ❌  	|
+| Consulter et répondre aux avis reçus									                         |        ✅       |     			✅     				|        ❌       	|   ❌  	|
+|            			**Permission Locataire**	            		                 |                	|   							 	|                	|      	|
+| Créer des fiches propriétaire											                              |        ✅       |     			❌     				|        ✅       	|   ❌  	|
+| Publier des avis sur les propriétaires et logements					              |        ✅       |     			❌     				|        ✅       	|   ❌  	|
+| Recevoir des notifications sur les avis publiés à leur sujet			       |        ✅       |     			❌     				|        ✅       	|   ❌  	|
+| Consulter et répondre aux avis reçus									                         |        ✅       |     			❌     				|        ✅       	|   ❌  	|
+|            **Permission Visiteir(Utlisateir non authentifié)**	       |                	|     			      				|                	|      	|
+| Consulter les classements et les avis publics                       	 |        ✅       |     			✅     				|        ✅       	|   ✅  	|
+| Rechercher des logements et propriétaires                       		    |        ✅       |     			✅     				|        ✅       	|   ✅  	|
