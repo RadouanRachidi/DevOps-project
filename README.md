@@ -72,12 +72,73 @@ Règles de Gestion de l'Intégrité des Données
 
 # Dictionnaire de données
 
+Table Utilisateur
 | 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
 |-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
 | UserId															 	|		INT			|Identifiant unique de l'utilisateur|Clé primaire, Auto-incrément|
 | UserName 																|VARCHAR			|Nom d'utilisateur					|Unique, Non nul	|
-| Accéder à toutes les fiches locataires et propriétaires				|VARCHAR			|Adresse mail						|Unique, Non nul	|
-| Gérer le système de notifications et les paramètres de l'application	|VARCHAR			|Hash du mdp						|Non nul			|
-| Analyser les données d'usage de l'application 						|ENUM				|Rôle de l'utilisateur				|Non nul			|
-| Créer des fiches locataire avec leur consentement					 	|DATETIME			|Date de création du compte			|Non nul			|
-| Publier des avis sur les locataires									|DATETIME			|Date de la dernière conenxion		|					|
+| Email																	|VARCHAR			|Adresse mail						|Unique, Non nul	|
+| PasswordHash															|VARCHAR			|Hash du mdp						|Non nul			|
+| Role 																	|ENUM				|Rôle de l'utilisateur				|Non nul			|
+| DateCreated					 										|DATETIME			|Date de création du compte			|Non nul			|
+| LastLogin																|DATETIME			|Date de la dernière conenxion		|					|
+
+Table Profil Locataire
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| TenantID															 	|INT				|Identifiant unique du profil locataire		|Clé primaire, Auto-incrément|
+| UserID 																|INT				|Identifiant de l'utilisateur				|Clé étrangère -> UserId	|
+| FirstName																|VARCHAR			|Prénom										|Non nul			|
+| LastName																|VARCHAR			|Nom de famille								|Non nul			|
+| Nationality 															|VARCHAR			|Nationalité du locataire					|					|
+| DateOfBirth															|DATETIME			|Date de naissance							|					|
+| ConsentStatus															|BOOLEAN			|Consentement pour le profil				|Non nul			|
+
+Table Profil Propriétaire
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| OwnerID															 	|INT				|Identifiant unique du profil propritétaire		|Clé primaire, Auto-incrément|
+| UserID 																|INT				|Identifiant de l'utilisateur		|Clé étrangère -> UserId|
+| FirstName																|VARCHAR			|Prénom								|Non nul			|
+| LastName																|VARCHAR			|Nom de famille						|Non nul			|
+| Nationality 															|VARCHAR			|Nationalité						|					|
+| BirthDate																|DATETIME			|Date de naissance					|					|
+
+Table Notification
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| NotificationID													 	|INT				|Identifiant unique de la notification		|Clé primaire, Auto-incrément|
+| UserID 																|INT				|Identifiant de l'utilisateur destinataire	|Clé étrangère, Non nul	|
+| Message																|TEXT				|Contenu de la notification					|Non nul			|
+| IsRead																|BOOLEAN			|Statut de lecture de la notification		|Non nul, def -> False|
+| DateSent 																|DATETIME			|Date d'envoi de la notification			|Non nul					|
+
+Table Logement
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| PropertyID													 		|INT				|Identifiant unique du logement					|Clé primaire, Auto-incrément|
+| OwnerID 																|INT				|Identifiant du propriétaire du logement		|Clé étrangère -> OwnerProfiles	|
+| Address																|VARCHAR			|Adresse complète du logement					|Non nul			|
+| PropertyStatus														|VARCHAR			|État actuel du logement (disponible, loué)		|Non nul|
+
+
+Table Classements
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| RankingID													 			|INT				|Identifiant unique du classement					|Clé primaire, Auto-incrément|
+| PropertyID 															|INT				|Identifiant du logement concerné					|Clé étrangère -> Properites	|
+| AverageRating															|FLOAT				|Moyenne des notes du logement						|Non nul -> 1 à 5			|
+| TotalReviews															|INT				|Nombre total d'avis reçus pour le logement			|Non nul Min 0 |
+
+Table Avis
+| 									Champ                             	| Type de Données 	| Description 					  	| Contrainte 		|
+|-----------------------------------------------------------------------|:--------------:	|:--------------------------------:	|:-----------------:|
+| ReviewID													 			|INT				|Identifiant unique de l'avis						|Clé primaire, Auto-incrément|
+| ReviewerID 															|INT				|Identifiant de l'utilisateur qui écrit l'avis		|Clé étrangère vers Users	|
+| ReviewedUserID														|FLOAT				|Identifiant de l'utilisateur concerné par l'avis	|Clé étrangère vers Users	|
+| Rating																|INT				|Note donnée dans l'avis							|Non nul -> 1 à 5 |
+| Comment													 			|TEXT				|Commentaire textuel de l'avis						|nullable|
+| ReviewDate 															|DATE				|Date à laquelle l'avis a été publié				|Non nul	|
+
+
+
