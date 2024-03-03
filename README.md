@@ -19,7 +19,7 @@ L'objectif de PraiseUs est de forger une communauté où la confiance, le respec
 
 ## RDG
 
-# Règle de gestion
+# Règles de gestions
 
 Règle de Gestion des Comptes Utilisateurs 
 
