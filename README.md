@@ -13,7 +13,7 @@ L'objectif de PraiseUs est de forger une communauté où la confiance, le respec
 ## Table des matières
 
 - 🪧 [À propos](#à-propos)
-- 📦 [Règles de gestion](#Règle-de-gestion)
+- 📦 [Règles de gestion](#RDG)
 - 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
 - 🤝 [Contribution](#contribution)
@@ -22,10 +22,9 @@ L'objectif de PraiseUs est de forger une communauté où la confiance, le respec
 - 🏷️ [Gestion des versions](#gestion-des-versions)
 - 📝 [Licence](#licence)
 
-## Règles de gestion
+## RDG
+# Règle de gestion
 
-
-# Règles de gestion
 
 Règle de Gestion des Comptes Utilisateurs 
 
