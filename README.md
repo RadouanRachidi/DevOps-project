@@ -1,3 +1,105 @@
+# Concepteur Développeur d'application
+
+## À propos
+
+PraiseUs est une application web novatrice conçue pour améliorer la relation entre locataires et propriétaires en offrant une plateforme fiable pour référencer et évaluer la qualité des expériences locatives. Cette plateforme permet aux propriétaires et aux agences de créer des profils de locataires avec leur accord, en y intégrant des informations essentielles telles que le nom, le prénom, la nationalité et la date de naissance. À partir de ces profils, les utilisateurs peuvent ensuite publier des avis détaillés incluant des notes et des commentaires sur leur expérience.
+
+Dans un esprit d'équité et de transparence, PraiseUs va plus loin en offrant également aux locataires la possibilité de créer à leur tour des fiches pour les propriétaires et de partager leur propre avis en fonction du déroulement du bail, ainsi que de noter l'état du logement. Cette approche bidirectionnelle assure que les deux parties ont une voix et que les avis sont équilibrés, encourageant ainsi un environnement locatif plus juste et plus transparent.
+
+Animée par l'ambition de devenir une référence dans le secteur de l'immobilier, PraiseUs envisage d'introduire un système de classement des meilleurs logements, basé sur les évaluations reçues, pour orienter les futurs locataires dans leurs choix. Un système de notifications est également en cours de développement pour informer les locataires lorsqu'un avis est publié à leur sujet, et inversement, assurant ainsi une communication fluide et continue entre les parties.
+
+L'objectif de PraiseUs est de forger une communauté où la confiance, le respect et l'appréciation mutuelle constituent les fondements de chaque interaction locative, transformant de ce fait le marché immobilier en un espace plus accueillant et professionnel pour tous.
+
+## Table des matières
+
+- 🪧 [À propos](#à-propos)
+- 📦 [Règles de gestion](#Règle-de-gestion)
+- 🚀 [Installation](#installation)
+- 🛠️ [Utilisation](#utilisation)
+- 🤝 [Contribution](#contribution)
+- 🏗️ [Construit avec](#construit-avec)
+- 📚 [Documentation](#documentation)
+- 🏷️ [Gestion des versions](#gestion-des-versions)
+- 📝 [Licence](#licence)
+
+## Règles de gestion
+
+
+# Règles de gestion
+
+Règle de Gestion des Comptes Utilisateurs 
+
+* Chaque utilisateur doit s'inscrire avec une adresse e-mail valide, un nom d'utilisateur et un mot de passe sécurisé conforme aux normes définies (longueur, complexité).
+* Les utilisateurs doivent confirmer leur adresse e-mail via un lien d'activation envoyé à leur adresse pour finaliser la création du compte.
+
+Règles de Gestion des Profils Locataires et Propriétaires
+
+* Les profils de locataires créés par les propriétaires/agences nécessitent le consentement écrit du locataire, à obtenir via un mécanisme sécurisé intégré à l'application (par exemple, signature électronique).
+* Les propriétaires ne peuvent créer des profils de locataire que pour des individus avec lesquels ils ont eu ou ont actuellement une relation contractuelle de location.
+
+Règles de Gestion des Avis
+
+* Les avis ne peuvent être soumis que pour des locations ayant existé pendant une durée minimale définie (6 mois).
+* Chaque avis doit être associé à une période de location spécifique et chaque locataire et/ou propriétaire ne peux créer qu'un seul et unique avis pour le bailleur/locatire.
+* Les avis doivent être modérables par les administrateurs de PraiseUs pour s'assurer qu'ils respectent les conditions d'utilisation de la plateforme.
+ 
+Règles de Gestion des Notifications
+
+* Les utilisateurs doivent pouvoir activer ou désactiver les notifications pour les nouveaux avis les concernant via les paramètres de leur compte.
+* Une notification doit être envoyée automatiquement à un locataire ou propriétaire lorsque un nouvel avis sur son profil est publié ou lorsqu'un avis existant est modifié.
+
+Règles de Gestion du Classement des Logements
+
+* Le classement des logements est basé sur la moyenne des notes reçues dans les avis.
+* Pour être éligible au classement, un logement doit avoir reçu un nombre minimum d'avis (5 avis).
+
+Règles de Gestion de l'Intégrité des Données
+
+* Les utilisateurs doivent avoir la possibilité de contester un avis s'ils estiment qu'il est inexact ou injuste, déclenchant ainsi un processus de révision par les administrateurs.
+* Les données personnelles des utilisateurs ne peuvent être utilisées qu'aux fins de fonctionnement de PraiseUs et ne doivent pas être divulguées à des tiers sans consentement explicite.
+
+## Installation
+
+[Étapes avec exemples des commandes à lancer pour installer le projet en local]
+
+## Utilisation
+
+[### Sous-titre + description avec exemple des commandes à lancer pour l'ensemble des actions disponibles à l'utilisation dans un mode de développement]
+
+## Contribution
+
+[### Sous-titre + description avec exemple des commandes à lancer pour l'ensemble du flux de contribution sur le dépôt]
+
+## Construit avec
+
+### Langages & Frameworks
+
+[Liste de tout ce qui permet la confection du projet avec description + lien vers la documentation]
+
+### Outils
+
+#### CI
+
+[Liste de tout ce qui permet l'intégration automatisée du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
+
+#### Déploiement
+
+[Liste de tout ce qui permet le déploiement du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
+
+## Documentation
+
+[Lien vers documentations externes ou documentation embarquée ici avec table des matières]
+
+## Gestion des versions
+
+Afin de maintenir un cycle de publication claire et de favoriser la rétrocompatibilité, la dénomination des versions suit la spécification décrite par la [Gestion sémantique de version](https://semver.org/lang/fr/)
+
+Les versions disponibles ainsi que les journaux décrivant les changements apportés sont disponibles depuis [la page des Releases][mettre le lien ici].
+
+## Licence
+
+Voir le fichier [LICENSE](./LICENSE.md) du dépôt.
+
 # PraiseUS
 
 PraiseUs est une application web novatrice conçue pour améliorer la relation entre locataires et propriétaires en offrant une plateforme fiable pour référencer et évaluer la qualité des expériences locatives. Cette plateforme permet aux propriétaires et aux agences de créer des profils de locataires avec leur accord, en y intégrant des informations essentielles telles que le nom, le prénom, la nationalité et la date de naissance. À partir de ces profils, les utilisateurs peuvent ensuite publier des avis détaillés incluant des notes et des commentaires sur leur expérience.
